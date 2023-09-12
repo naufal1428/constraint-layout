@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/layout_toolbar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="wrap_content"
+                android:layout_height="250dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:src="@drawable/pitch" />
+
+            <TextView
+                android:id="@+id/txt_title_news"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:text="News Title"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+            <TextView
+                android:id="@+id/txt_content_news"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Pharetra diam sit amet nisl suscipit adipiscing bibendum est ultricies. Turpis egestas pretium aenean pharetra magna ac placerat vestibulum. Ipsum dolor sit amet consectetur adipiscing elit pellentesque habitant. Nulla at volutpat diam ut venenatis. Adipiscing bibendum est ultricies integer quis auctor. Congue mauris rhoncus aenean vel elit scelerisque. Nibh praesent tristique magna sit amet purus. Eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis. Ultrices gravida dictum fusce ut placerat. Cursus mattis molestie a iaculis at erat pellentesque adipiscing. Placerat orci nulla pellentesque dignissim enim sit amet. Tempus quam pellentesque nec nam aliquam sem et tortor.  Sed pulvinar proin gravida hendrerit lectus a. Malesuada proin libero nunc consequat interdum varius sit. Lectus sit amet est placerat. Lacus sed turpis tincidunt id. In nisl nisi scelerisque eu ultrices vitae auctor. Nulla malesuada pellentesque elit eget gravida cum sociis natoque penatibus. Habitasse platea dictumst quisque sagittis purus sit amet volutpat. Venenatis a condimentum vitae sapien pellentesque habitant morbi tristique. Neque vitae tempus quam pellentesque nec. Tincidunt arcu non sodales neque sodales. Sit amet commodo nulla facilisi nullam vehicula ipsum a arcu. Rhoncus urna neque viverra justo nec ultrices dui sapien eget. At tempor commodo ullamcorper a lacus vestibulum sed arcu non.  Tristique senectus et netus et malesuada fames ac. Morbi quis commodo odio aenean sed adipiscing diam donec. Potenti nullam ac tortor vitae purus faucibus. Ipsum dolor sit amet consectetur adipiscing elit. Ac feugiat sed lectus vestibulum mattis ullamcorper. Sit amet porttitor eget dolor morbi non arcu. Tempor id eu nisl nunc mi ipsum faucibus vitae. Viverra accumsan in nisl nisi scelerisque eu. Tincidunt vitae semper quis lectus nulla at volutpat diam. Egestas diam in arcu cursus euismod quis viverra nibh. Est velit egestas dui id ornare arcu odio ut sem. Id porta nibh venenatis cras sed. Donec adipiscing tristique risus nec feugiat in."
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="@+id/txt_title_news"
+                app:layout_constraintStart_toStartOf="@+id/txt_title_news"
+                app:layout_constraintTop_toBottomOf="@+id/txt_title_news" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:id="@+id/guideLine"
+                app:layout_constraintGuide_percent="0.5"/>
+
+            <Button
+                android:id="@+id/button"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:text="sebelumnya"
+                app:layout_constraintEnd_toStartOf="@id/guideLine"
+                app:layout_constraintStart_toStartOf="@+id/txt_content_news"
+                app:layout_constraintTop_toBottomOf="@id/txt_content_news" />
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="selanjutnya"
+                app:layout_constraintEnd_toEndOf="@+id/txt_content_news"
+                app:layout_constraintStart_toEndOf="@id/guideLine"
+                app:layout_constraintTop_toBottomOf="@id/txt_content_news" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

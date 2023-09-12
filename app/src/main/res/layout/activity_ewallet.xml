@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EWallet">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/hi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hi Clarencce,"
+            android:textSize="24sp"
+            android:textAlignment="center"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/ic_notif"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@drawable/baseline_notifications_none_24"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/saldo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="5,600.00"
+            android:textSize="48sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@id/hi"
+            app:layout_constraintStart_toStartOf="@id/hi"
+            android:layout_marginTop="64dp"/>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideLineV1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.5"/>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideLineH1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.25"/>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideLineH2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.425"/>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideLineH3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.7"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/boxPayMoney"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/guideLineV1"
+            app:layout_constraintTop_toBottomOf="@id/guideLineH1"
+            app:layout_constraintBottom_toTopOf="@id/guideLineH2"
+            android:padding="16dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/bg_purple">
+
+            <TextView
+                android:id="@+id/payMoney"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="@id/boxPayMoney"
+                app:layout_constraintBottom_toTopOf="@+id/payMoneyDesc"
+                app:layout_constraintStart_toStartOf="@id/boxPayMoney"
+                app:layout_constraintEnd_toEndOf="@id/boxPayMoney"
+                android:text="Pay money"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                />
+
+            <TextView
+                android:id="@+id/payMoneyDesc"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/payMoney"
+                app:layout_constraintBottom_toBottomOf="@id/boxPayMoney"
+                app:layout_constraintStart_toStartOf="@id/boxPayMoney"
+                app:layout_constraintEnd_toEndOf="@id/boxPayMoney"
+                android:text="To wallet, bank or\nmobile number"
+                android:textSize="16sp"
+                />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/boxRequestMoney"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintStart_toEndOf="@id/guideLineV1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/guideLineH1"
+            app:layout_constraintBottom_toTopOf="@id/guideLineH2"
+            android:padding="16dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/bg_green">
+
+            <TextView
+                android:id="@+id/requestMoney"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="@id/boxRequestMoney"
+                app:layout_constraintBottom_toTopOf="@+id/requestMoneyDesc"
+                app:layout_constraintStart_toStartOf="@id/boxRequestMoney"
+                app:layout_constraintEnd_toEndOf="@id/boxRequestMoney"
+                android:text="Request money"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                />
+
+            <TextView
+                android:id="@+id/requestMoneyDesc"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/requestMoney"
+                app:layout_constraintBottom_toBottomOf="@id/boxRequestMoney"
+                app:layout_constraintStart_toStartOf="@id/boxRequestMoney"
+                app:layout_constraintEnd_toEndOf="@id/boxRequestMoney"
+                android:text="Request money\nfrom Cowry Loans"
+                android:textSize="16sp"
+                />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/boxPayBill"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/guideLineV1"
+            app:layout_constraintTop_toBottomOf="@id/guideLineH2"
+            app:layout_constraintBottom_toTopOf="@id/guideLineH3"
+            android:paddingTop="60dp"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:paddingBottom="48dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/bg_grey">
+
+            <TextView
+                android:id="@+id/payBill"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="@id/boxPayBill"
+                app:layout_constraintBottom_toTopOf="@id/PayBillDesc"
+                app:layout_constraintStart_toStartOf="@id/boxPayBill"
+                app:layout_constraintEnd_toEndOf="@id/boxPayBill"
+                android:text="Pay bill"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:paddingBottom="0dp"/>
+
+            <TextView
+                android:id="@+id/PayBillDesc"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/payBill"
+                app:layout_constraintBottom_toBottomOf="@id/boxPayBill"
+                app:layout_constraintStart_toStartOf="@id/boxPayBill"
+                app:layout_constraintEnd_toEndOf="@id/boxPayBill"
+                android:text="Zero transactions\nfees when you pay"
+                android:textSize="16sp"
+                />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/boxBuyAirtime"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintStart_toEndOf="@id/guideLineV1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/guideLineH2"
+            app:layout_constraintBottom_toTopOf="@id/guideLineH3"
+            android:paddingTop="60dp"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:paddingBottom="32dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="8dp"
+            android:background="@drawable/bg_orange">
+
+            <TextView
+                android:id="@+id/buyAirtime"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="@id/boxBuyAirtime"
+                app:layout_constraintBottom_toTopOf="@+id/buyAirtimeDesc"
+                app:layout_constraintStart_toStartOf="@id/boxBuyAirtime"
+                app:layout_constraintEnd_toEndOf="@id/boxBuyAirtime"
+                android:text="Buy airtime"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:paddingBottom="0dp"/>
+
+            <TextView
+                android:id="@+id/buyAirtimeDesc"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/buyAirtime"
+                app:layout_constraintBottom_toBottomOf="@id/boxBuyAirtime"
+                app:layout_constraintStart_toStartOf="@id/boxBuyAirtime"
+                app:layout_constraintEnd_toEndOf="@id/boxBuyAirtime"
+                android:text="Top-up or Send\nairtime across\nCountries"
+                android:textSize="16sp"
+                />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <include
+        android:id="@+id/taskbar"
+        layout="@layout/layout_taskbar"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
